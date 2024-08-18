@@ -1,0 +1,57 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: var(--choice-border);
+  background-color: var(--bg-primary);
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: var(--blue);
+  color: var(--bg-primary);
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+/* ALTERANDO AS CORES DA ALTERNATIVA SELECIONADA */
+
+.correct {
+  background-color: var(--green);
+}
+
+.incorrect {
+  background-color: var(--red);
+}
+
+.bar-container {
+  border: 0.1rem solid var(--red);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  height: 4.2rem;
+}
+
+.timer-countdown {
+  margin: 1rem;
+  height: 2rem;
+  animation: barDepletion calc(var(--duration) * 1s) steps(var(--duration)) ;
+  transform-origin: left center;
+}
+
+@keyframes barDepletion {
+  to {transform:  scaleX(0);}
+
+  0%{background-color: var(--green);}
+  100%{background-color: var(--red);}
+}

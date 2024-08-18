@@ -1,0 +1,20 @@
+#highScoresList {
+  list-style: none;
+  width: 100%;
+  max-width: 40rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+#highScoresList li {
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid var(--black);
+}
+
+#highScoresList li:last-child {
+  border-bottom: none;
+}
